@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Браузерные войны 1995–2001: Netscape против Internet Explorer, появление Firefox и Chrome. Как битва браузеров сформировала современный веб.">
+  <meta name="author" content="Кузенная Ульяна">
+  <title>Браузерные войны — История развития интернета</title>
+
+  <!-- XP.css -->
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="page__header">
+    <div class="window header-window">
+      <div class="title-bar">
+        <div class="title-bar-text">🌐 История интернета — Internet Explorer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body header-window__body">
+        <a href="index.html" class="header-window__logo">
+          <span class="header-window__logo-icon">🌐</span>
+          <span class="header-window__logo-text">InternetHistory</span>
+        </a>
+
+        <!-- Бургер-кнопка для мобильных -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <!-- Основная навигация -->
+        <nav class="main-nav" id="main-nav" aria-label="Главная навигация">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="prehistory.html" class="main-nav__link">Предыстория</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="www-birth.html" class="main-nav__link">Рождение WWW</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="browser-wars.html" class="main-nav__link">Браузерные войны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="web2.html" class="main-nav__link">Веб 2.0</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="mobile.html" class="main-nav__link">Мобильный интернет</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="timeline.html" class="main-nav__link">Хронология</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="people.html" class="main-nav__link">Персоны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="contacts.html" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ОСНОВНАЯ ЧАСТЬ ========== -->
+  <div class="page__container">
+
+    <!-- MAIN -->
+    <main class="page__main">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📱 Мобильный интернет — Интернет в кармане</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <h1 class="page__title">Мобильный интернет: сеть в каждом кармане</h1>
+
+          <p class="page__lead">
+            До 2007 года интернет был «привязан» к компьютеру. Но появление
+            смартфонов изменило всё — теперь сеть доступна в любой точке мира,
+            где есть сигнал.
+          </p>
+
+          <!-- Секция: как всё изменилось -->
+          <section class="section" aria-labelledby="change-title">
+            <h2 id="change-title" class="section__title">Как смартфоны изменили интернет</h2>
+
+            <figure class="image-figure">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/mobile-320.webp 320w,
+                    img/mobile-640.webp 640w,
+                    img/mobile-960.webp 960w
+                  "
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 70vw, 700px"
+                >
+                <img
+                  src="img/mobile-960.jpg"
+                  srcset="
+                    img/mobile-320.jpg 320w,
+                    img/mobile-640.jpg 640w,
+                    img/mobile-960.jpg 960w
+                  "
+                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 70vw, 700px"
+                  alt="Смартфон в руке с открытым мобильным браузером"
+                  title="Мобильный интернет в действии"
+                  width="960"
+                  height="640"
+                  loading="lazy"
+                >
+              </picture>
+              <figcaption class="image-figure__caption">
+                Первый iPhone (2007) стал точкой отсчёта мобильной эпохи
+              </figcaption>
+            </figure>
+
+            <div class="text-block">
+              <p>
+                10 января 2007 года <strong>Стив Джобс</strong> представил первый
+                iPhone. Это был не просто телефон — это был полноценный компьютер
+                в кармане с настоящим браузером Safari. Пользователи впервые
+                получили доступ к «настоящему» интернету, а не к урезанным
+                WAP-страницам.
+              </p>
+              <p>
+                В том же году Google основала Open Handset Alliance и выпустила
+                <strong>Android</strong> — открытую мобильную ОС. Конкуренция
+                между Apple и Google ускорила развитие мобильных технологий
+                в десятки раз.
+              </p>
+            </div>
+          </section>
+
+          <!-- Секция: поколения связи -->
+          <section class="section" aria-labelledby="generations-title">
+            <h2 id="generations-title" class="section__title">Поколения мобильной связи</h2>
+
+            <div class="table-wrap">
+              <table class="dates-table">
+                <caption class="dates-table__caption">
+                  Эволюция мобильного интернета
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Поколение</th>
+                    <th scope="col">Годы</th>
+                    <th scope="col">Скорость</th>
+                    <th scope="col">Что стало возможно</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>2G</strong></td>
+                    <td><time datetime="1991">1991–2000</time></td>
+                    <td>до 64 Кбит/с</td>
+                    <td>SMS, WAP-страницы, первые мобильные браузеры</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3G</strong></td>
+                    <td><time datetime="2001">2001–2008</time></td>
+                    <td>до 2 Мбит/с</td>
+                    <td>Видеозвонки, полноценные веб-сайты, первые приложения</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4G / LTE</strong></td>
+                    <td><time datetime="2009">2009–2018</time></td>
+                    <td>до 100 Мбит/с</td>
+                    <td>Стриминг видео, онлайн-игры, такси, доставка</td>
+                  </tr>
+                  <tr>
+                    <td><strong>5G</strong></td>
+                    <td><time datetime="2019">2019 — наши дни</time></td>
+                    <td>до 10 Гбит/с</td>
+                    <td>IoT, дополненная реальность, автономный транспорт</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Секция: что изменил мобильный интернет -->
+          <section class="section" aria-labelledby="impact-title">
+            <h2 id="impact-title" class="section__title">Что изменил мобильный интернет</h2>
+            <ul class="tech-list">
+              <li class="tech-list__item">
+                <strong>Рост аудитории.</strong> Впервые в истории
+                больше людей выходят в интернет с телефона, чем с компьютера.
+              </li>
+              <li class="tech-list__item">
+                <strong>Мобильные приложения.</strong> Целые экосистемы
+                (App Store, Google Play) выросли в отдельные индустрии.
+              </li>
+              <li class="tech-list__item">
+                <strong>Геолокация.</strong> Карты, такси, доставка —
+                всё стало возможно благодаря GPS в смартфонах.
+              </li>
+              <li class="tech-list__item">
+                <strong>Adaptive Web.</strong> Сайты научились подстраиваться
+                под размер экрана — родилась адаптивная вёрстка.
+              </li>
+              <li class="tech-list__item">
+                <strong>Мессенджеры.</strong> WhatsApp, Telegram, WeChat
+                заменили SMS и звонки в повседневной жизни.
+              </li>
+            </ul>
+          </section>
+
+          <!-- Секция: цитата -->
+          <section class="section" aria-labelledby="quote-mobile-title">
+            <h2 id="quote-mobile-title" class="section__title">Цитата</h2>
+            <blockquote class="quote">
+              <p class="quote__text">
+                «Смартфон — это не устройство. Это окно в мир, которое
+                всегда с тобой».
+              </p>
+              <footer class="quote__author">
+                — <cite>Стив Джобс</cite>
+              </footer>
+            </blockquote>
+          </section>
+
+          <!-- Навигация -->
+          <nav class="page-nav" aria-label="Навигация по истории">
+            <a href="web2.html" class="page-nav__link page-nav__link--prev">← Веб 2.0</a>
+            <a href="timeline.html" class="page-nav__link page-nav__link--next">Хронология →</a>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="page__aside">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📁 Проводник</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body aside-body">
+
+          <!-- Разделы -->
+          <section class="aside-block" aria-labelledby="aside-nav-title">
+            <h2 id="aside-nav-title" class="aside-block__title">Разделы</h2>
+            <ul class="aside-list">
+              <li><a href="prehistory.html" class="aside-list__link">📼 Предыстория</a></li>
+              <li><a href="www-birth.html" class="aside-list__link">🌐 Рождение WWW</a></li>
+              <li><a href="browser-wars.html" class="aside-list__link">⚔️ Браузерные войны</a></li>
+              <li><a href="web2.html" class="aside-list__link">💬 Веб 2.0</a></li>
+              <li><a href="mobile.html" class="aside-list__link">📱 Мобильный</a></li>
+              <li><a href="timeline.html" class="aside-list__link">📅 Хронология</a></li>
+              <li><a href="people.html" class="aside-list__link">👤 Персоны</a></li>
+            </ul>
+          </section>
+
+          <!-- Подписка -->
+          <section class="aside-block" aria-labelledby="aside-subscribe-title">
+            <h2 id="aside-subscribe-title" class="aside-block__title">Подписка</h2>
+            <p class="aside-block__text">Новости истории интернета раз в месяц.</p>
+            <form class="aside-form needs-validation" novalidate>
+              <label for="subscribe-email" class="aside-form__label">Email:</label>
+              <input
+                type="email"
+                class="aside-form__input"
+                id="subscribe-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              >
+              <div class="aside-form__error">Введите корректный email</div>
+              <button type="submit" class="aside-form__btn">Подписаться</button>
+            </form>
+          </section>
+
+          <!-- Рекламный блок -->
+          <section class="aside-block aside-block--ad" aria-labelledby="aside-ad-title">
+            <h2 id="aside-ad-title" class="aside-block__title">Реклама</h2>
+            <p class="aside-block__text">
+              💾 <strong>Dial-up 56k</strong><br>
+              Подключение к интернету — всего $19.99/мес!
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page__footer">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">© Сведения</div>
+      </div>
+      <div class="window-body footer-body">
+        <div class="footer-cols">
+          <section class="footer-col">
+            <h2 class="footer-col__title">О проекте</h2>
+            <p class="footer-col__text">
+              Учебный проект по фронтенд-разработке.<br>
+              Тема: «История развития интернета».<br>
+              Стек: HTML5, CSS3, XP.css, JavaScript.
+            </p>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Разделы</h2>
+            <ul class="footer-list">
+              <li><a href="index.html" class="footer-list__link">Главная</a></li>
+              <li><a href="timeline.html" class="footer-list__link">Хронология</a></li>
+              <li><a href="people.html" class="footer-list__link">Персоны</a></li>
+              <li><a href="contacts.html" class="footer-list__link">Контакты</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Контакты</h2>
+            <address class="footer-address">
+              Email: <a href="mailto:kuzennaya.ula@yandex.ru" class="footer-address__link">kuzennaya.ula@yandex.ru</a><br>
+              GitHub: <a href="https://github.com/kuzennayaula/history-internet" class="footer-address__link">репозиторий</a>
+            </address>
+          </section>
+        </div>
+
+        <p class="footer-copyright">
+          © <span id="current-year">2026</span> InternetHistory. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

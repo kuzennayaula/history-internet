@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Страница не найдена. Вернитесь на главную или воспользуйтесь навигацией по истории развития интернета.">
+  <meta name="author" content="Кузенная Ульяна">
+  <title>Страница не найдена — История развития интернета</title>
+
+  <!-- XP.css -->
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="page__header">
+    <div class="window header-window">
+      <div class="title-bar">
+        <div class="title-bar-text">🌐 История интернета — Internet Explorer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body header-window__body">
+        <a href="index.html" class="header-window__logo">
+          <span class="header-window__logo-icon">🌐</span>
+          <span class="header-window__logo-text">InternetHistory</span>
+        </a>
+
+        <!-- Бургер-кнопка для мобильных -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <!-- Основная навигация -->
+        <nav class="main-nav" id="main-nav" aria-label="Главная навигация">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="prehistory.html" class="main-nav__link">Предыстория</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="www-birth.html" class="main-nav__link">Рождение WWW</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="browser-wars.html" class="main-nav__link">Браузерные войны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="web2.html" class="main-nav__link">Веб 2.0</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="mobile.html" class="main-nav__link">Мобильный интернет</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="timeline.html" class="main-nav__link">Хронология</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="people.html" class="main-nav__link">Персоны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="contacts.html" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ОСНОВНАЯ ЧАСТЬ ========== -->
+  <div class="page__container">
+
+    <!-- MAIN -->
+    <main class="page__main">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">⚠️ Ошибка 404 — Страница не найдена</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <section class="error-page" aria-labelledby="error-title">
+            <div class="error-page__icon" aria-hidden="true">🔌</div>
+
+            <h1 id="error-title" class="error-page__code">404</h1>
+
+            <p class="error-page__title">Страница не найдена</p>
+
+            <p class="error-page__text">
+              Похоже, эта страница потерялась в глубинах интернета — так же,
+              как когда-то терялись пакеты данных в ARPANET.
+            </p>
+
+            <p class="error-page__text">
+              Возможно, ссылка устарела, или вы ошиблись в адресе. Но не
+              переживайте — вернуться на правильный путь очень просто.
+            </p>
+
+            <div class="error-page__actions">
+              <a href="index.html" class="error-page__btn error-page__btn--primary">
+                🏠 На главную
+              </a>
+              <a href="timeline.html" class="error-page__btn">
+                📅 Хронология
+              </a>
+              <a href="contacts.html" class="error-page__btn">
+                ✉️ Написать нам
+              </a>
+            </div>
+
+            <hr class="error-page__divider">
+
+            <p class="error-page__hint">
+              <small>
+                Кстати, ошибка 404 — не случайность. Именно это число
+                присвоено комнате 404 в CERN, где работал Тим Бернерс-Ли.
+                В ней не было ничего особенного, но забавное совпадение
+                сделало номер знаменитым.
+              </small>
+            </p>
+          </section>
+
+          <!-- Навигация -->
+          <nav class="page-nav" aria-label="Навигация по сайту">
+            <a href="contacts.html" class="page-nav__link page-nav__link--prev">← Контакты</a>
+            <a href="index.html" class="page-nav__link page-nav__link--next">На главную →</a>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="page__aside">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📁 Проводник</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body aside-body">
+
+          <!-- Разделы -->
+          <section class="aside-block" aria-labelledby="aside-nav-title">
+            <h2 id="aside-nav-title" class="aside-block__title">Разделы</h2>
+            <ul class="aside-list">
+              <li><a href="prehistory.html" class="aside-list__link">📼 Предыстория</a></li>
+              <li><a href="www-birth.html" class="aside-list__link">🌐 Рождение WWW</a></li>
+              <li><a href="browser-wars.html" class="aside-list__link">⚔️ Браузерные войны</a></li>
+              <li><a href="web2.html" class="aside-list__link">💬 Веб 2.0</a></li>
+              <li><a href="mobile.html" class="aside-list__link">📱 Мобильный</a></li>
+              <li><a href="timeline.html" class="aside-list__link">📅 Хронология</a></li>
+              <li><a href="people.html" class="aside-list__link">👤 Персоны</a></li>
+            </ul>
+          </section>
+
+          <!-- Подписка -->
+          <section class="aside-block" aria-labelledby="aside-subscribe-title">
+            <h2 id="aside-subscribe-title" class="aside-block__title">Подписка</h2>
+            <p class="aside-block__text">Новости истории интернета раз в месяц.</p>
+            <form class="aside-form needs-validation" novalidate>
+              <label for="subscribe-email" class="aside-form__label">Email:</label>
+              <input
+                type="email"
+                class="aside-form__input"
+                id="subscribe-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              >
+              <div class="aside-form__error">Введите корректный email</div>
+              <button type="submit" class="aside-form__btn">Подписаться</button>
+            </form>
+          </section>
+
+          <!-- Рекламный блок -->
+          <section class="aside-block aside-block--ad" aria-labelledby="aside-ad-title">
+            <h2 id="aside-ad-title" class="aside-block__title">Реклама</h2>
+            <p class="aside-block__text">
+              💾 <strong>Dial-up 56k</strong><br>
+              Подключение к интернету — всего $19.99/мес!
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page__footer">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">© Сведения</div>
+      </div>
+      <div class="window-body footer-body">
+        <div class="footer-cols">
+          <section class="footer-col">
+            <h2 class="footer-col__title">О проекте</h2>
+            <p class="footer-col__text">
+              Учебный проект по фронтенд-разработке.<br>
+              Тема: «История развития интернета».<br>
+              Стек: HTML5, CSS3, XP.css, JavaScript.
+            </p>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Разделы</h2>
+            <ul class="footer-list">
+              <li><a href="index.html" class="footer-list__link">Главная</a></li>
+              <li><a href="timeline.html" class="footer-list__link">Хронология</a></li>
+              <li><a href="people.html" class="footer-list__link">Персоны</a></li>
+              <li><a href="contacts.html" class="footer-list__link">Контакты</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Контакты</h2>
+            <address class="footer-address">
+              Email: <a href="mailto:kuzennaya.ula@yandex.ru" class="footer-address__link">kuzennaya.ula@yandex.ru</a><br>
+              GitHub: <a href="https://github.com/kuzennayaula/history-internet" class="footer-address__link">репозиторий</a>
+            </address>
+          </section>
+        </div>
+
+        <p class="footer-copyright">
+          © <span id="current-year">2026</span> InternetHistory. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Хронология развития интернета: от ARPANET 1969 года до 5G и искусственного интеллекта. Интерактивная лента ключевых событий.">
+  <meta name="author" content="Кузенная Ульяна">
+  <title>Хронология — История развития интернета</title>
+
+  <!-- XP.css -->
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="page__header">
+    <div class="window header-window">
+      <div class="title-bar">
+        <div class="title-bar-text">🌐 История интернета — Internet Explorer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body header-window__body">
+        <a href="index.html" class="header-window__logo">
+          <span class="header-window__logo-icon">🌐</span>
+          <span class="header-window__logo-text">InternetHistory</span>
+        </a>
+
+        <!-- Бургер-кнопка для мобильных -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <!-- Основная навигация -->
+        <nav class="main-nav" id="main-nav" aria-label="Главная навигация">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="prehistory.html" class="main-nav__link">Предыстория</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="www-birth.html" class="main-nav__link">Рождение WWW</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="browser-wars.html" class="main-nav__link">Браузерные войны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="web2.html" class="main-nav__link">Веб 2.0</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="mobile.html" class="main-nav__link">Мобильный интернет</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="timeline.html" class="main-nav__link">Хронология</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="people.html" class="main-nav__link">Персоны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="contacts.html" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ОСНОВНАЯ ЧАСТЬ ========== -->
+  <div class="page__container">
+
+    <!-- MAIN -->
+    <main class="page__main">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📅 Хронология — Всё в одном месте</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <h1 class="page__title">Хронология развития интернета</h1>
+
+          <p class="page__lead">
+            От первых экспериментов 1960-х до эпохи искусственного интеллекта.
+            Передвигайте ползунок ниже, чтобы увидеть события разных десятилетий.
+          </p>
+
+          <!-- Секция: Слайдер -->
+          <section class="section" aria-labelledby="slider-title">
+            <h2 id="slider-title" class="section__title">Фильтр по годам</h2>
+
+            <div class="slider-block">
+              <label for="year-range" class="slider-block__label">
+                Показать события до года:
+                <output id="year-output" class="slider-block__output">2026</output>
+              </label>
+
+              <input
+                type="range"
+                id="year-range"
+                class="slider-block__range"
+                min="1969"
+                max="2026"
+                value="2026"
+                step="1"
+                aria-describedby="year-output"
+              >
+
+              <div class="slider-block__marks" aria-hidden="true">
+                <span>1969</span>
+                <span>1990</span>
+                <span>2010</span>
+                <span>2026</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Секция: Список событий -->
+          <section class="section" aria-labelledby="events-title">
+            <h2 id="events-title" class="section__title">Ключевые события</h2>
+
+            <ol class="events-list" id="events-list">
+              <li class="events-list__item" data-year="1969">
+                <time datetime="1969" class="events-list__year">1969</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск ARPANET</h3>
+                  <p class="events-list__text">
+                    Первая сеть соединила четыре университета США: UCLA, SRI,
+                    UCSB и Университет Юты. Первое сообщение — «LO» (пытались
+                    передать «LOGIN», но система упала на третьей букве).
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1971">
+                <time datetime="1971" class="events-list__year">1971</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первое электронное письмо</h3>
+                  <p class="events-list__text">
+                    Рэй Томлинсон отправил первое письмо по сети и выбрал символ
+                    «@» для разделения имени пользователя и адреса сервера.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1983">
+                <time datetime="1983" class="events-list__year">1983</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Переход на TCP/IP</h3>
+                  <p class="events-list__text">
+                    1 января 1983 года ARPANET перешла на протокол TCP/IP.
+                    Этот день считается днём рождения современного интернета.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1989">
+                <time datetime="1989" class="events-list__year">1989</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Идея Всемирной паутины</h3>
+                  <p class="events-list__text">
+                    Тим Бернерс-Ли в CERN предложил систему связанных гиперссылками
+                    документов. <a href="www-birth.html" class="events-list__link">Подробнее о WWW →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1991">
+                <time datetime="1991" class="events-list__year">1991</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первый публичный веб-сайт</h3>
+                  <p class="events-list__text">
+                    В августе 1991 года мир увидел первый веб-сайт по адресу
+                    info.cern.ch — он описывал сам проект WWW.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1995">
+                <time datetime="1995" class="events-list__year">1995</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Начало браузерных войн</h3>
+                  <p class="events-list__text">
+                    Microsoft выпускает Internet Explorer вместе с Windows 95.
+                    Netscape теряет лидерство. <a href="browser-wars.html" class="events-list__link">О браузерных войнах →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2001">
+                <time datetime="2001" class="events-list__year">2001</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск Википедии</h3>
+                  <p class="events-list__text">
+                    Свободная энциклопедия, которую пишут сами пользователи,
+                    становится одним из самых посещаемых сайтов мира.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2004">
+                <time datetime="2004" class="events-list__year">2004</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Веб 2.0 и Facebook</h3>
+                  <p class="events-list__text">
+                    Появляются социальные сети, а сам термин «Web 2.0» становится
+                    символом новой эпохи. <a href="web2.html" class="events-list__link">Подробнее о Веб 2.0 →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2007">
+                <time datetime="2007" class="events-list__year">2007</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первый iPhone</h3>
+                  <p class="events-list__text">
+                    Стив Джобс представляет смартфон, изменивший доступ к интернету.
+                    <a href="mobile.html" class="events-list__link">О мобильном интернете →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2012">
+                <time datetime="2012" class="events-list__year">2012</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Chrome — лидер рынка</h3>
+                  <p class="events-list__text">
+                    Google Chrome обходит Internet Explorer и становится самым
+                    популярным браузером мира.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2019">
+                <time datetime="2019" class="events-list__year">2019</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск коммерческих 5G-сетей</h3>
+                  <p class="events-list__text">
+                    Пятое поколение мобильной связи делает возможными IoT,
+                    автономный транспорт и дополненную реальность.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2023">
+                <time datetime="2023" class="events-list__year">2023</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Бум искусственного интеллекта</h3>
+                  <p class="events-list__text">
+                    Появление массовых AI-сервисов меняет интернет: поиск,
+                    творчество, разработка — всё получает интеллектуального
+                    помощника.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Навигация -->
+          <nav class="page-nav" aria-label="Навигация по истории">
+            <a href="mobile.html" class="page-nav__link page-nav__link--prev">← Мобильный интернет</a>
+            <a href="contacts.html" class="page-nav__link page-nav__link--next">Контакты →</a>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="page__aside">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📁 Проводник</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body aside-body">
+
+          <!-- Разделы -->
+          <section class="aside-block" aria-labelledby="aside-nav-title">
+            <h2 id="aside-nav-title" class="aside-block__title">Разделы</h2>
+            <ul class="aside-list">
+              <li><a href="prehistory.html" class="aside-list__link">📼 Предыстория</a></li>
+              <li><a href="www-birth.html" class="aside-list__link">🌐 Рождение WWW</a></li>
+              <li><a href="browser-wars.html" class="aside-list__link">⚔️ Браузерные войны</a></li>
+              <li><a href="web2.html" class="aside-list__link">💬 Веб 2.0</a></li>
+              <li><a href="mobile.html" class="aside-list__link">📱 Мобильный</a></li>
+              <li><a href="timeline.html" class="aside-list__link">📅 Хронология</a></li>
+              <li><a href="people.html" class="aside-list__link">👤 Персоны</a></li>
+            </ul>
+          </section>
+
+          <!-- Подписка -->
+          <section class="aside-block" aria-labelledby="aside-subscribe-title">
+            <h2 id="aside-subscribe-title" class="aside-block__title">Подписка</h2>
+            <p class="aside-block__text">Новости истории интернета раз в месяц.</p>
+            <form class="aside-form needs-validation" novalidate>
+              <label for="subscribe-email" class="aside-form__label">Email:</label>
+              <input
+                type="email"
+                class="aside-form__input"
+                id="subscribe-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              >
+              <div class="aside-form__error">Введите корректный email</div>
+              <button type="submit" class="aside-form__btn">Подписаться</button>
+            </form>
+          </section>
+
+          <!-- Рекламный блок -->
+          <section class="aside-block aside-block--ad" aria-labelledby="aside-ad-title">
+            <h2 id="aside-ad-title" class="aside-block__title">Реклама</h2>
+            <p class="aside-block__text">
+              💾 <strong>Dial-up 56k</strong><br>
+              Подключение к интернету — всего $19.99/мес!
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page__footer">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">© Сведения</div>
+      </div>
+      <div class="window-body footer-body">
+        <div class="footer-cols">
+          <section class="footer-col">
+            <h2 class="footer-col__title">О проекте</h2>
+            <p class="footer-col__text">
+              Учебный проект по фронтенд-разработке.<br>
+              Тема: «История развития интернета».<br>
+              Стек: HTML5, CSS3, XP.css, JavaScript.
+            </p>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Разделы</h2>
+            <ul class="footer-list">
+              <li><a href="index.html" class="footer-list__link">Главная</a></li>
+              <li><a href="timeline.html" class="footer-list__link">Хронология</a></li>
+              <li><a href="people.html" class="footer-list__link">Персоны</a></li>
+              <li><a href="contacts.html" class="footer-list__link">Контакты</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Контакты</h2>
+            <address class="footer-address">
+              Email: <a href="mailto:kuzennaya.ula@yandex.ru" class="footer-address__link">kuzennaya.ula@yandex.ru</a><br>
+              GitHub: <a href="https://github.com/kuzennayaula/history-internet" class="footer-address__link">репозиторий</a>
+            </address>
+          </section>
+        </div>
+
+        <p class="footer-copyright">
+          © <span id="current-year">2026</span> InternetHistory. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Свяжитесь с автором проекта «История развития интернета». Форма обратной связи, контакты и ответы на частые вопросы.">
+  <meta name="author" content="Кузенная Ульяна">
+  <title>Контакты — История развития интернета</title>
+
+  <!-- XP.css -->
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="page__header">
+    <div class="window header-window">
+      <div class="title-bar">
+        <div class="title-bar-text">🌐 История интернета — Internet Explorer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body header-window__body">
+        <a href="index.html" class="header-window__logo">
+          <span class="header-window__logo-icon">🌐</span>
+          <span class="header-window__logo-text">InternetHistory</span>
+        </a>
+
+        <!-- Бургер-кнопка для мобильных -->
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <!-- Основная навигация -->
+        <nav class="main-nav" id="main-nav" aria-label="Главная навигация">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="prehistory.html" class="main-nav__link">Предыстория</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="www-birth.html" class="main-nav__link">Рождение WWW</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="browser-wars.html" class="main-nav__link">Браузерные войны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="web2.html" class="main-nav__link">Веб 2.0</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="mobile.html" class="main-nav__link">Мобильный интернет</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="timeline.html" class="main-nav__link">Хронология</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="people.html" class="main-nav__link">Персоны</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="contacts.html" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ОСНОВНАЯ ЧАСТЬ ========== -->
+  <div class="page__container">
+
+    <!-- MAIN -->
+    <main class="page__main">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">✉️ Контакты — Обратная связь</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <h1 class="page__title">Свяжитесь с нами</h1>
+
+          <p class="page__lead">
+            Есть вопрос, замечание или предложение по проекту «История развития
+            интернета»? Напишите нам — мы читаем каждое сообщение.
+          </p>
+
+          <!-- Секция: контакты -->
+          <section class="section" aria-labelledby="contacts-info-title">
+            <h2 id="contacts-info-title" class="section__title">Контактная информация</h2>
+
+            <div class="contacts-grid">
+              <article class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">📧</div>
+                <h3 class="contact-card__title">Email</h3>
+                <address class="contact-card__value">
+                  <a href="mailto:kuzennaya.ula@yandex.ru">kuzennaya.ula@yandex.ru</a>
+                </address>
+              </article>
+
+              <article class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">💻</div>
+                <h3 class="contact-card__title">GitHub</h3>
+                <p class="contact-card__value">
+                  <a href="https://github.com/kuzennayaula">github.com/kuzennayaula</a>
+                </p>
+              </article>
+
+              <article class="contact-card">
+                <div class="contact-card__icon" aria-hidden="true">🎓</div>
+                <h3 class="contact-card__title">Учебный проект</h3>
+                <p class="contact-card__value">
+                  Фронтенд-разработка<br>
+                  Тема: «История развития интернета»
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Секция: форма -->
+          <section class="section" aria-labelledby="form-title">
+            <h2 id="form-title" class="section__title">Напишите нам</h2>
+
+            <form class="feedback-form needs-validation" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="feedback-name" class="form-group__label">
+                    Ваше имя <span class="form-group__required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="feedback-name"
+                    name="name"
+                    class="form-group__input"
+                    placeholder="Иван Иванов"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                  >
+                  <div class="form-group__error">Введите имя (минимум 2 символа)</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="feedback-email" class="form-group__label">
+                    Email <span class="form-group__required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="feedback-email"
+                    name="email"
+                    class="form-group__input"
+                    placeholder="you@example.com"
+                    required
+                  >
+                  <div class="form-group__error">Введите корректный email</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-subject" class="form-group__label">
+                  Тема <span class="form-group__required" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="feedback-subject"
+                  name="subject"
+                  class="form-group__input"
+                  required
+                >
+                  <option value="">— Выберите тему —</option>
+                  <option value="question">Вопрос по проекту</option>
+                  <option value="feedback">Отзыв или замечание</option>
+                  <option value="suggestion">Предложение по теме</option>
+                  <option value="other">Другое</option>
+                </select>
+                <div class="form-group__error">Выберите тему обращения</div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-message" class="form-group__label">
+                  Сообщение <span class="form-group__required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="feedback-message"
+                  name="message"
+                  class="form-group__input form-group__input--textarea"
+                  rows="6"
+                  placeholder="Расскажите, что вы думаете о проекте..."
+                  required
+                  minlength="10"
+                  maxlength="1000"
+                ></textarea>
+                <div class="form-group__error">Введите сообщение (минимум 10 символов)</div>
+              </div>
+
+              <div class="form-group form-group--checkbox">
+                <label class="form-checkbox">
+                  <input
+                    type="checkbox"
+                    id="feedback-agree"
+                    name="agree"
+                    class="form-checkbox__input"
+                    required
+                  >
+                  <span class="form-checkbox__text">
+                    Я согласен(на) с обработкой персональных данных
+                  </span>
+                </label>
+                <div class="form-group__error">Необходимо согласие</div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="form-actions__submit">
+                  Отправить сообщение
+                </button>
+                <button type="reset" class="form-actions__reset">
+                  Очистить
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Секция: FAQ -->
+          <section class="section" aria-labelledby="faq-title">
+            <h2 id="faq-title" class="section__title">Частые вопросы</h2>
+
+            <details class="faq">
+              <summary class="faq__question">Этот сайт — реальный проект?</summary>
+              <p class="faq__answer">
+                Это учебный проект по фронтенд-разработке. Все материалы собраны
+                из открытых источников для демонстрации навыков вёрстки
+                и использования CSS-фреймворка XP.css.
+              </p>
+            </details>
+
+            <details class="faq">
+              <summary class="faq__question">Можно ли использовать материалы сайта?</summary>
+              <p class="faq__answer">
+                Да, все тексты и материалы можно использовать в образовательных
+                целях. Ссылка на первоисточники — приветствуется.
+              </p>
+            </details>
+
+            <details class="faq">
+              <summary class="faq__question">Как долго вы отвечаете на письма?</summary>
+              <p class="faq__answer">
+                Обычно в течение 2–3 рабочих дней. Если вопрос срочный —
+                напишите в теме письма «СРОЧНО».
+              </p>
+            </details>
+          </section>
+
+          <!-- Навигация -->
+          <nav class="page-nav" aria-label="Навигация по истории">
+            <a href="timeline.html" class="page-nav__link page-nav__link--prev">← Хронология</a>
+            <a href="index.html" class="page-nav__link page-nav__link--next">На главную →</a>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="page__aside">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">📁 Проводник</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body aside-body">
+
+          <!-- Разделы -->
+          <section class="aside-block" aria-labelledby="aside-nav-title">
+            <h2 id="aside-nav-title" class="aside-block__title">Разделы</h2>
+            <ul class="aside-list">
+              <li><a href="prehistory.html" class="aside-list__link">📼 Предыстория</a></li>
+              <li><a href="www-birth.html" class="aside-list__link">🌐 Рождение WWW</a></li>
+              <li><a href="browser-wars.html" class="aside-list__link">⚔️ Браузерные войны</a></li>
+              <li><a href="web2.html" class="aside-list__link">💬 Веб 2.0</a></li>
+              <li><a href="mobile.html" class="aside-list__link">📱 Мобильный</a></li>
+              <li><a href="timeline.html" class="aside-list__link">📅 Хронология</a></li>
+              <li><a href="people.html" class="aside-list__link">👤 Персоны</a></li>
+            </ul>
+          </section>
+
+          <!-- Подписка -->
+          <section class="aside-block" aria-labelledby="aside-subscribe-title">
+            <h2 id="aside-subscribe-title" class="aside-block__title">Подписка</h2>
+            <p class="aside-block__text">Новости истории интернета раз в месяц.</p>
+            <form class="aside-form needs-validation" novalidate>
+              <label for="subscribe-email" class="aside-form__label">Email:</label>
+              <input
+                type="email"
+                class="aside-form__input"
+                id="subscribe-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              >
+              <div class="aside-form__error">Введите корректный email</div>
+              <button type="submit" class="aside-form__btn">Подписаться</button>
+            </form>
+          </section>
+
+          <!-- Рекламный блок -->
+          <section class="aside-block aside-block--ad" aria-labelledby="aside-ad-title">
+            <h2 id="aside-ad-title" class="aside-block__title">Реклама</h2>
+            <p class="aside-block__text">
+              💾 <strong>Dial-up 56k</strong><br>
+              Подключение к интернету — всего $19.99/мес!
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page__footer">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">© Сведения</div>
+      </div>
+      <div class="window-body footer-body">
+        <div class="footer-cols">
+          <section class="footer-col">
+            <h2 class="footer-col__title">О проекте</h2>
+            <p class="footer-col__text">
+              Учебный проект по фронтенд-разработке.<br>
+              Тема: «История развития интернета».<br>
+              Стек: HTML5, CSS3, XP.css, JavaScript.
+            </p>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Разделы</h2>
+            <ul class="footer-list">
+              <li><a href="index.html" class="footer-list__link">Главная</a></li>
+              <li><a href="timeline.html" class="footer-list__link">Хронология</a></li>
+              <li><a href="people.html" class="footer-list__link">Персоны</a></li>
+              <li><a href="contacts.html" class="footer-list__link">Контакты</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h2 class="footer-col__title">Контакты</h2>
+            <address class="footer-address">
+              Email: <a href="mailto:kuzennaya.ula@yandex.ru" class="footer-address__link">kuzennaya.ula@yandex.ru</a><br>
+              GitHub: <a href="https://github.com/kuzennayaula/history-internet" class="footer-address__link">репозиторий</a>
+            </address>
+          </section>
+        </div>
+
+        <p class="footer-copyright">
+          © <span id="current-year">2026</span> InternetHistory. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
