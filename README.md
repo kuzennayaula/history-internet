@@ -2,8 +2,8 @@
 **Тема проекта:** История развития интернета
 **CSS-фреймворк:** XP.css
 
-**Live-сайт:** https://kuzennaayula.github.io/history-internet/
-**Репозиторий:** https://github.com/kuzennaayula/history-internet
+**Live-сайт:** https://kuzennayaula.github.io/history-internet/
+**Репозиторий:** https://github.com/kuzennayaula/history-internet
 
 ## Описание
 Учебный проект по фронтенд-разработке: тематический сайт из 10 страниц,
