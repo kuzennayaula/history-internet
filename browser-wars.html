@@ -89,7 +89,7 @@
     <main class="page__main">
       <div class="window">
         <div class="title-bar">
-          <div class="title-bar-text">📅 Хронология — Всё в одном месте</div>
+          <div class="title-bar-text">⚔️ Браузерные войны — 1995–2001</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
@@ -98,188 +98,227 @@
         </div>
 
         <div class="window-body">
-          <h1 class="page__title">Хронология развития интернета</h1>
+          <h1 class="page__title">Браузерные войны</h1>
 
           <p class="page__lead">
-            От первых экспериментов 1960-х до эпохи искусственного интеллекта.
-            Передвигайте ползунок ниже, чтобы увидеть события разных десятилетий.
+            К середине 1990-х интернет перестал быть уделом учёных — в сеть пришли
+            обычные пользователи. И тут же началась битва за то, чей браузер будет
+            открывать для них Веб.
           </p>
 
-          <!-- Секция: Слайдер -->
-          <section class="section" aria-labelledby="slider-title">
-            <h2 id="slider-title" class="section__title">Фильтр по годам</h2>
+          <!-- Секция: Как всё началось -->
+          <section class="section" aria-labelledby="start-title">
+            <h2 id="start-title" class="section__title">Как всё началось</h2>
+            <div class="text-block">
+              <p>
+                В 1994 году <strong>Марк Андриссен</strong> основал компанию Netscape
+                и выпустил браузер <em>Netscape Navigator</em>. Он был быстрым,
+                удобным и мгновенно стал популярным — уже через год им пользовались
+                более 80% пользователей интернета.
+              </p>
+              <p>
+                Microsoft, до этого недооценивавшая интернет, быстро спохватилась.
+                В 1995 году вышла <em>Windows 95</em> с встроенным браузером
+                <strong>Internet Explorer</strong>. Он распространялся бесплатно
+                вместе с операционной системой — и это изменило правила игры.
+              </p>
+            </div>
+          </section>
 
-            <div class="slider-block">
-              <label for="year-range" class="slider-block__label">
-                Показать события до года:
-                <output id="year-output" class="slider-block__output">2025</output>
-              </label>
+          <!-- Секция: Табы с браузерами -->
+          <section class="section" aria-labelledby="browsers-tabs-title">
+            <h2 id="browsers-tabs-title" class="section__title">Ключевые игроки</h2>
 
-              <input
-                type="range"
-                id="year-range"
-                class="slider-block__range"
-                min="1969"
-                max="2025"
-                value="2025"
-                step="1"
-                aria-describedby="year-output"
+            <div class="tabs">
+              <div class="tabs__list" role="tablist" aria-label="Браузеры">
+                <button
+                  class="tabs__btn tabs__btn--active"
+                  id="tab-netscape"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-netscape"
+                  type="button"
+                >
+                  Netscape Navigator
+                </button>
+                <button
+                  class="tabs__btn"
+                  id="tab-ie"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-ie"
+                  type="button"
+                >
+                  Internet Explorer
+                </button>
+                <button
+                  class="tabs__btn"
+                  id="tab-firefox"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-firefox"
+                  type="button"
+                >
+                  Firefox
+                </button>
+                <button
+                  class="tabs__btn"
+                  id="tab-chrome"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-chrome"
+                  type="button"
+                >
+                  Google Chrome
+                </button>
+              </div>
+
+              <div
+                class="tabs__panel"
+                id="panel-netscape"
+                role="tabpanel"
+                aria-labelledby="tab-netscape"
               >
+                <h3 class="tabs__panel-title">Netscape Navigator (1994–1998)</h3>
+                <p>
+                  Первый по-настоящему массовый браузер. Именно в нём появились
+                  cookies, JavaScript и поддержка фреймов. В 1998 году компания
+                  Netscape открыла исходный код своего браузера — так родился
+                  проект Mozilla, из которого позже вырос Firefox.
+                </p>
+              </div>
 
-              <div class="slider-block__marks" aria-hidden="true">
-                <span>1969</span>
-                <span>1990</span>
-                <span>2010</span>
-                <span>2025</span>
+              <div
+                class="tabs__panel"
+                id="panel-ie"
+                role="tabpanel"
+                aria-labelledby="tab-ie"
+                hidden
+              >
+                <h3 class="tabs__panel-title">Internet Explorer (1995–2013)</h3>
+                <p>
+                  Браузер Microsoft, поставлявшийся вместе с Windows. Благодаря
+                  этому к 2002 году им пользовались около 95% аудитории. Однако
+                  низкие темпы развития и проблемы с безопасностью привели к
+                  постепенной потере позиций — к 2013 году доля упала до 30%.
+                </p>
+              </div>
+
+              <div
+                class="tabs__panel"
+                id="panel-firefox"
+                role="tabpanel"
+                aria-labelledby="tab-firefox"
+                hidden
+              >
+                <h3 class="tabs__panel-title">Mozilla Firefox (2002 — наши дни)</h3>
+                <p>
+                  Наследник Netscape, выпущенный сообществом Mozilla. Firefox
+                  первым предложил вкладки, встроенный поиск, блокировку
+                  всплывающих окон и открытые веб-стандарты. Он стал главной
+                  альтернативой Internet Explorer.
+                </p>
+              </div>
+
+              <div
+                class="tabs__panel"
+                id="panel-chrome"
+                role="tabpanel"
+                aria-labelledby="tab-chrome"
+                hidden
+              >
+                <h3 class="tabs__panel-title">Google Chrome (2008 — наши дни)</h3>
+                <p>
+                  Браузер Google с минималистичным интерфейсом и движком V8.
+                  Славится скоростью работы и синхронизацией с аккаунтом Google.
+                  С 2012 года — самый популярный браузер в мире (доля > 60%).
+                </p>
               </div>
             </div>
           </section>
 
-          <!-- Секция: Список событий -->
-          <section class="section" aria-labelledby="events-title">
-            <h2 id="events-title" class="section__title">Ключевые события</h2>
+          <!-- Секция: Таблица сравнения -->
+          <section class="section" aria-labelledby="compare-title">
+            <h2 id="compare-title" class="section__title">Сравнение браузеров</h2>
 
-            <ol class="events-list" id="events-list">
-              <li class="events-list__item" data-year="1969">
-                <time datetime="1969" class="events-list__year">1969</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Запуск ARPANET</h3>
-                  <p class="events-list__text">
-                    Первая сеть соединила четыре университета США: UCLA, SRI,
-                    UCSB и Университет Юты. Первое сообщение — «LO» (пытались
-                    передать «LOGIN», но система упала на третьей букве).
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="1971">
-                <time datetime="1971" class="events-list__year">1971</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Первое электронное письмо</h3>
-                  <p class="events-list__text">
-                    Рэй Томлинсон отправил первое письмо по сети и выбрал символ
-                    «@» для разделения имени пользователя и адреса сервера.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="1983">
-                <time datetime="1983" class="events-list__year">1983</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Переход на TCP/IP</h3>
-                  <p class="events-list__text">
-                    1 января 1983 года ARPANET перешла на протокол TCP/IP.
-                    Этот день считается днём рождения современного интернета.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="1989">
-                <time datetime="1989" class="events-list__year">1989</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Идея Всемирной паутины</h3>
-                  <p class="events-list__text">
-                    Тим Бернерс-Ли в CERN предложил систему связанных гиперссылками
-                    документов. <a href="www-birth.html" class="events-list__link">Подробнее о WWW →</a>
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="1991">
-                <time datetime="1991" class="events-list__year">1991</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Первый публичный веб-сайт</h3>
-                  <p class="events-list__text">
-                    В августе 1991 года мир увидел первый веб-сайт по адресу
-                    info.cern.ch — он описывал сам проект WWW.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="1995">
-                <time datetime="1995" class="events-list__year">1995</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Начало браузерных войн</h3>
-                  <p class="events-list__text">
-                    Microsoft выпускает Internet Explorer вместе с Windows 95.
-                    Netscape теряет лидерство. <a href="browser-wars.html" class="events-list__link">О браузерных войнах →</a>
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2001">
-                <time datetime="2001" class="events-list__year">2001</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Запуск Википедии</h3>
-                  <p class="events-list__text">
-                    Свободная энциклопедия, которую пишут сами пользователи,
-                    становится одним из самых посещаемых сайтов мира.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2004">
-                <time datetime="2004" class="events-list__year">2004</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Веб 2.0 и Facebook</h3>
-                  <p class="events-list__text">
-                    Появляются социальные сети, а сам термин «Web 2.0» становится
-                    символом новой эпохи. <a href="web2.html" class="events-list__link">Подробнее о Веб 2.0 →</a>
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2007">
-                <time datetime="2007" class="events-list__year">2007</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Первый iPhone</h3>
-                  <p class="events-list__text">
-                    Стив Джобс представляет смартфон, изменивший доступ к интернету.
-                    <a href="mobile.html" class="events-list__link">О мобильном интернете →</a>
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2012">
-                <time datetime="2012" class="events-list__year">2012</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Chrome — лидер рынка</h3>
-                  <p class="events-list__text">
-                    Google Chrome обходит Internet Explorer и становится самым
-                    популярным браузером мира.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2019">
-                <time datetime="2019" class="events-list__year">2019</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Запуск коммерческих 5G-сетей</h3>
-                  <p class="events-list__text">
-                    Пятое поколение мобильной связи делает возможными IoT,
-                    автономный транспорт и дополненную реальность.
-                  </p>
-                </div>
-              </li>
-
-              <li class="events-list__item" data-year="2023">
-                <time datetime="2023" class="events-list__year">2023</time>
-                <div class="events-list__content">
-                  <h3 class="events-list__title">Бум искусственного интеллекта</h3>
-                  <p class="events-list__text">
-                    Появление массовых AI-сервисов меняет интернет: поиск,
-                    творчество, разработка — всё получает интеллектуального
-                    помощника.
-                  </p>
-                </div>
-              </li>
-            </ol>
+            <div class="table-wrap">
+              <table class="dates-table">
+                <caption class="dates-table__caption">
+                  Ключевые браузеры и их вклад в развитие интернета
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Браузер</th>
+                    <th scope="col">Год выпуска</th>
+                    <th scope="col">Разработчик</th>
+                    <th scope="col">Главная инновация</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Netscape Navigator</td>
+                    <td><time datetime="1994">1994</time></td>
+                    <td>Netscape Communications</td>
+                    <td>Первый массовый браузер, cookies, JavaScript</td>
+                  </tr>
+                  <tr>
+                    <td>Internet Explorer</td>
+                    <td><time datetime="1995">1995</time></td>
+                    <td>Microsoft</td>
+                    <td>Встроен в Windows, бесплатное распространение</td>
+                  </tr>
+                  <tr>
+                    <td>Opera</td>
+                    <td><time datetime="1996">1996</time></td>
+                    <td>Opera Software</td>
+                    <td>Вкладки, масштабирование страниц, скорость</td>
+                  </tr>
+                  <tr>
+                    <td>Mozilla Firefox</td>
+                    <td><time datetime="2002">2002</time></td>
+                    <td>Mozilla Foundation</td>
+                    <td>Открытый код, расширения, встроенный поиск</td>
+                  </tr>
+                  <tr>
+                    <td>Safari</td>
+                    <td><time datetime="2003">2003</time></td>
+                    <td>Apple</td>
+                    <td>Основа WebKit, ставшая стандартом на мобильных</td>
+                  </tr>
+                  <tr>
+                    <td>Google Chrome</td>
+                    <td><time datetime="2008">2008</time></td>
+                    <td>Google</td>
+                    <td>Движок V8, многопроцессность, минимализм</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
-          <!-- Навигация -->
+          <!-- Секция: Итоги -->
+          <section class="section" aria-labelledby="outcome-title">
+            <h2 id="outcome-title" class="section__title">Чем закончились войны</h2>
+            <div class="text-block">
+              <p>
+                К середине 2000-х конкуренция сделала своё дело: браузеры стали
+                быстрее, безопаснее и удобнее. Появились веб-стандарты
+                <strong>HTML5</strong> и <strong>CSS3</strong>, которые позволили
+                создавать сложные приложения прямо в браузере.
+              </p>
+              <p>
+                Сегодня на рынке доминируют <strong>Chrome</strong>,
+                <strong>Safari</strong> и <strong>Firefox</strong> — но битва
+                продолжается: на сцену вышли мобильные браузеры и новые игроки
+                вроде <em>Brave</em> и <em>Edge</em>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Навигация между страницами -->
           <nav class="page-nav" aria-label="Навигация по истории">
-            <a href="mobile.html" class="page-nav__link page-nav__link--prev">← Мобильный интернет</a>
-            <a href="contacts.html" class="page-nav__link page-nav__link--next">Контакты →</a>
+            <a href="www-birth.html" class="page-nav__link page-nav__link--prev">← Рождение WWW</a>
+            <a href="web2.html" class="page-nav__link page-nav__link--next">Веб 2.0 →</a>
           </nav>
         </div>
       </div>
