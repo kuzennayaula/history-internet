@@ -89,7 +89,7 @@
     <main class="page__main">
       <div class="window">
         <div class="title-bar">
-          <div class="title-bar-text">📱 Мобильный интернет — Интернет в кармане</div>
+          <div class="title-bar-text">📅 Хронология — Всё в одном месте</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
@@ -98,158 +98,188 @@
         </div>
 
         <div class="window-body">
-          <h1 class="page__title">Мобильный интернет: сеть в каждом кармане</h1>
+          <h1 class="page__title">Хронология развития интернета</h1>
 
           <p class="page__lead">
-            До 2007 года интернет был «привязан» к компьютеру. Но появление
-            смартфонов изменило всё — теперь сеть доступна в любой точке мира,
-            где есть сигнал.
+            От первых экспериментов 1960-х до эпохи искусственного интеллекта.
+            Передвигайте ползунок ниже, чтобы увидеть события разных десятилетий.
           </p>
 
-          <!-- Секция: как всё изменилось -->
-          <section class="section" aria-labelledby="change-title">
-            <h2 id="change-title" class="section__title">Как смартфоны изменили интернет</h2>
+          <!-- Секция: Слайдер -->
+          <section class="section" aria-labelledby="slider-title">
+            <h2 id="slider-title" class="section__title">Фильтр по годам</h2>
 
-            <figure class="image-figure">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="
-                    img/mobile-320.webp 320w,
-                    img/mobile-640.webp 640w,
-                    img/mobile-960.webp 960w
-                  "
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 70vw, 700px"
-                >
-                <img
-                  src="img/mobile-960.jpg"
-                  srcset="
-                    img/mobile-320.jpg 320w,
-                    img/mobile-640.jpg 640w,
-                    img/mobile-960.jpg 960w
-                  "
-                  sizes="(max-width: 767px) 100vw, (max-width: 991px) 70vw, 700px"
-                  alt="Смартфон в руке с открытым мобильным браузером"
-                  title="Мобильный интернет в действии"
-                  width="960"
-                  height="640"
-                  loading="lazy"
-                >
-              </picture>
-              <figcaption class="image-figure__caption">
-                Первый iPhone (2007) стал точкой отсчёта мобильной эпохи
-              </figcaption>
-            </figure>
+            <div class="slider-block">
+              <label for="year-range" class="slider-block__label">
+                Показать события до года:
+                <output id="year-output" class="slider-block__output">2025</output>
+              </label>
 
-            <div class="text-block">
-              <p>
-                10 января 2007 года <strong>Стив Джобс</strong> представил первый
-                iPhone. Это был не просто телефон — это был полноценный компьютер
-                в кармане с настоящим браузером Safari. Пользователи впервые
-                получили доступ к «настоящему» интернету, а не к урезанным
-                WAP-страницам.
-              </p>
-              <p>
-                В том же году Google основала Open Handset Alliance и выпустила
-                <strong>Android</strong> — открытую мобильную ОС. Конкуренция
-                между Apple и Google ускорила развитие мобильных технологий
-                в десятки раз.
-              </p>
+              <input
+                type="range"
+                id="year-range"
+                class="slider-block__range"
+                min="1969"
+                max="2025"
+                value="2025"
+                step="1"
+                aria-describedby="year-output"
+              >
+
+              <div class="slider-block__marks" aria-hidden="true">
+                <span>1969</span>
+                <span>1990</span>
+                <span>2010</span>
+                <span>2025</span>
+              </div>
             </div>
           </section>
 
-          <!-- Секция: поколения связи -->
-          <section class="section" aria-labelledby="generations-title">
-            <h2 id="generations-title" class="section__title">Поколения мобильной связи</h2>
+          <!-- Секция: Список событий -->
+          <section class="section" aria-labelledby="events-title">
+            <h2 id="events-title" class="section__title">Ключевые события</h2>
 
-            <div class="table-wrap">
-              <table class="dates-table">
-                <caption class="dates-table__caption">
-                  Эволюция мобильного интернета
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Поколение</th>
-                    <th scope="col">Годы</th>
-                    <th scope="col">Скорость</th>
-                    <th scope="col">Что стало возможно</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>2G</strong></td>
-                    <td><time datetime="1991">1991–2000</time></td>
-                    <td>до 64 Кбит/с</td>
-                    <td>SMS, WAP-страницы, первые мобильные браузеры</td>
-                  </tr>
-                  <tr>
-                    <td><strong>3G</strong></td>
-                    <td><time datetime="2001">2001–2008</time></td>
-                    <td>до 2 Мбит/с</td>
-                    <td>Видеозвонки, полноценные веб-сайты, первые приложения</td>
-                  </tr>
-                  <tr>
-                    <td><strong>4G / LTE</strong></td>
-                    <td><time datetime="2009">2009–2018</time></td>
-                    <td>до 100 Мбит/с</td>
-                    <td>Стриминг видео, онлайн-игры, такси, доставка</td>
-                  </tr>
-                  <tr>
-                    <td><strong>5G</strong></td>
-                    <td><time datetime="2019">2019 — наши дни</time></td>
-                    <td>до 10 Гбит/с</td>
-                    <td>IoT, дополненная реальность, автономный транспорт</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+            <ol class="events-list" id="events-list">
+              <li class="events-list__item" data-year="1969">
+                <time datetime="1969" class="events-list__year">1969</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск ARPANET</h3>
+                  <p class="events-list__text">
+                    Первая сеть соединила четыре университета США: UCLA, SRI,
+                    UCSB и Университет Юты. Первое сообщение — «LO» (пытались
+                    передать «LOGIN», но система упала на третьей букве).
+                  </p>
+                </div>
+              </li>
 
-          <!-- Секция: что изменил мобильный интернет -->
-          <section class="section" aria-labelledby="impact-title">
-            <h2 id="impact-title" class="section__title">Что изменил мобильный интернет</h2>
-            <ul class="tech-list">
-              <li class="tech-list__item">
-                <strong>Рост аудитории.</strong> Впервые в истории
-                больше людей выходят в интернет с телефона, чем с компьютера.
+              <li class="events-list__item" data-year="1971">
+                <time datetime="1971" class="events-list__year">1971</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первое электронное письмо</h3>
+                  <p class="events-list__text">
+                    Рэй Томлинсон отправил первое письмо по сети и выбрал символ
+                    «@» для разделения имени пользователя и адреса сервера.
+                  </p>
+                </div>
               </li>
-              <li class="tech-list__item">
-                <strong>Мобильные приложения.</strong> Целые экосистемы
-                (App Store, Google Play) выросли в отдельные индустрии.
-              </li>
-              <li class="tech-list__item">
-                <strong>Геолокация.</strong> Карты, такси, доставка —
-                всё стало возможно благодаря GPS в смартфонах.
-              </li>
-              <li class="tech-list__item">
-                <strong>Adaptive Web.</strong> Сайты научились подстраиваться
-                под размер экрана — родилась адаптивная вёрстка.
-              </li>
-              <li class="tech-list__item">
-                <strong>Мессенджеры.</strong> WhatsApp, Telegram, WeChat
-                заменили SMS и звонки в повседневной жизни.
-              </li>
-            </ul>
-          </section>
 
-          <!-- Секция: цитата -->
-          <section class="section" aria-labelledby="quote-mobile-title">
-            <h2 id="quote-mobile-title" class="section__title">Цитата</h2>
-            <blockquote class="quote">
-              <p class="quote__text">
-                «Смартфон — это не устройство. Это окно в мир, которое
-                всегда с тобой».
-              </p>
-              <footer class="quote__author">
-                — <cite>Стив Джобс</cite>
-              </footer>
-            </blockquote>
+              <li class="events-list__item" data-year="1983">
+                <time datetime="1983" class="events-list__year">1983</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Переход на TCP/IP</h3>
+                  <p class="events-list__text">
+                    1 января 1983 года ARPANET перешла на протокол TCP/IP.
+                    Этот день считается днём рождения современного интернета.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1989">
+                <time datetime="1989" class="events-list__year">1989</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Идея Всемирной паутины</h3>
+                  <p class="events-list__text">
+                    Тим Бернерс-Ли в CERN предложил систему связанных гиперссылками
+                    документов. <a href="www-birth.html" class="events-list__link">Подробнее о WWW →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1991">
+                <time datetime="1991" class="events-list__year">1991</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первый публичный веб-сайт</h3>
+                  <p class="events-list__text">
+                    В августе 1991 года мир увидел первый веб-сайт по адресу
+                    info.cern.ch — он описывал сам проект WWW.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="1995">
+                <time datetime="1995" class="events-list__year">1995</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Начало браузерных войн</h3>
+                  <p class="events-list__text">
+                    Microsoft выпускает Internet Explorer вместе с Windows 95.
+                    Netscape теряет лидерство. <a href="browser-wars.html" class="events-list__link">О браузерных войнах →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2001">
+                <time datetime="2001" class="events-list__year">2001</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск Википедии</h3>
+                  <p class="events-list__text">
+                    Свободная энциклопедия, которую пишут сами пользователи,
+                    становится одним из самых посещаемых сайтов мира.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2004">
+                <time datetime="2004" class="events-list__year">2004</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Веб 2.0 и Facebook</h3>
+                  <p class="events-list__text">
+                    Появляются социальные сети, а сам термин «Web 2.0» становится
+                    символом новой эпохи. <a href="web2.html" class="events-list__link">Подробнее о Веб 2.0 →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2007">
+                <time datetime="2007" class="events-list__year">2007</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Первый iPhone</h3>
+                  <p class="events-list__text">
+                    Стив Джобс представляет смартфон, изменивший доступ к интернету.
+                    <a href="mobile.html" class="events-list__link">О мобильном интернете →</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2012">
+                <time datetime="2012" class="events-list__year">2012</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Chrome — лидер рынка</h3>
+                  <p class="events-list__text">
+                    Google Chrome обходит Internet Explorer и становится самым
+                    популярным браузером мира.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2019">
+                <time datetime="2019" class="events-list__year">2019</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Запуск коммерческих 5G-сетей</h3>
+                  <p class="events-list__text">
+                    Пятое поколение мобильной связи делает возможными IoT,
+                    автономный транспорт и дополненную реальность.
+                  </p>
+                </div>
+              </li>
+
+              <li class="events-list__item" data-year="2023">
+                <time datetime="2023" class="events-list__year">2023</time>
+                <div class="events-list__content">
+                  <h3 class="events-list__title">Бум искусственного интеллекта</h3>
+                  <p class="events-list__text">
+                    Появление массовых AI-сервисов меняет интернет: поиск,
+                    творчество, разработка — всё получает интеллектуального
+                    помощника.
+                  </p>
+                </div>
+              </li>
+            </ol>
           </section>
 
           <!-- Навигация -->
           <nav class="page-nav" aria-label="Навигация по истории">
-            <a href="web2.html" class="page-nav__link page-nav__link--prev">← Веб 2.0</a>
-            <a href="timeline.html" class="page-nav__link page-nav__link--next">Хронология →</a>
+            <a href="mobile.html" class="page-nav__link page-nav__link--prev">← Мобильный интернет</a>
+            <a href="contacts.html" class="page-nav__link page-nav__link--next">Контакты →</a>
           </nav>
         </div>
       </div>
